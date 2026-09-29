@@ -1,23 +1,23 @@
 # Three-Tier Multi-Cloud DevOps Application
 
-Author: Sandeep Kumar Prasad
+**Author:** Sandeep Kumar Prasad
 
-A production-style 3-tier application for managing user authentication and task workflows, built with React, Express, and PostgreSQL, and designed to run locally with Docker Compose while remaining deployable to AWS, Azure, and GCP via Kubernetes, Helm, and Terraform.
+A production-style 3-tier application for managing user authentication and task workflows, built with React, Express, and PostgreSQL. It is designed to run locally with Docker Compose while remaining deployable to AWS, Azure, and GCP via Kubernetes, Helm, and Terraform.
 
 ## Overview
 
 This project demonstrates a complete full-stack delivery setup with:
 
-- Frontend: React + Vite
-- Backend: Node.js + Express + JWT authentication
-- Database: PostgreSQL
-- Local runtime: Docker Compose
-- Cloud runtime: EKS, AKS, and GKE-ready manifests
-- IaC: Terraform for infrastructure provisioning
-- Orchestration: Kubernetes and Helm
-- CI/CD: GitHub Actions workflows
-- Observability: Prometheus and Grafana
-- Security: secret handling guidance, scanning, and least-privilege deployment patterns
+- **Frontend:** React + Vite
+- **Backend:** Node.js + Express + JWT authentication
+- **Database:** PostgreSQL
+- **Local runtime:** Docker Compose
+- **Cloud runtime:** EKS, AKS, and GKE-ready manifests
+- **IaC:** Terraform for infrastructure provisioning
+- **Orchestration:** Kubernetes and Helm
+- **CI/CD:** GitHub Actions workflows
+- **Observability:** Prometheus and Grafana
+- **Security:** Secret handling guidance, scanning, and least-privilege deployment patterns
 
 ## Architecture
 
@@ -43,14 +43,16 @@ flowchart LR
 - Terraform plans for multi-cloud provisioning
 - CI/CD workflow scaffolding for GitHub Actions
 
-## Tech stack
+## Tech Stack
 
 ### Frontend
+
 - React 18
 - Vite
 - Testing Library + Vitest
 
 ### Backend
+
 - Node.js 20+
 - Express
 - PostgreSQL client and pg-mem for tests
@@ -58,13 +60,14 @@ flowchart LR
 - Jest + Supertest
 
 ### Infrastructure
+
 - Docker Compose
 - Kubernetes manifests
 - Helm chart
 - Terraform modules
 - Prometheus + Grafana monitoring
 
-## Quick start
+## Quick Start
 
 ### Prerequisites
 
@@ -86,10 +89,10 @@ npm run docker:up
 
 Then access:
 
-- Frontend: http://localhost:5173
-- Backend: http://localhost:5000
-- Health check: http://localhost:5000/health
-- API base: http://localhost:5000/api/v1
+- Frontend: [http://localhost:5173](http://localhost:5173)
+- Backend: [http://localhost:5000](http://localhost:5000)
+- Health check: [http://localhost:5000/health](http://localhost:5000/health)
+- API base: [http://localhost:5000/api/v1](http://localhost:5000/api/v1)
 
 ### 3) Run without Docker
 
@@ -109,7 +112,28 @@ npm install
 NODE_ENV=development USE_PG_MEM=true node src/server.js
 ```
 
-## Project structure
+## Demo Login Credentials
+
+For local development and testing, use the following demo account:
+
+| Field    | Value               |
+| -------- | ------------------- |
+| Email    | `admin@example.com` |
+| Password | `Admin@123`         |
+
+> **Note:** These credentials are intended only for the local development/demo environment. Do not use them in production. For production deployments, use secure passwords and managed secret storage.
+
+### Login
+
+After starting the application with Docker Compose, open:
+
+```text
+http://localhost:5173
+```
+
+Use the credentials above on the login page.
+
+## Project Structure
 
 ```text
 three-tier-multicloud-devops/
@@ -133,7 +157,7 @@ three-tier-multicloud-devops/
 └── package-lock.json
 ```
 
-## Environment variables
+## Environment Variables
 
 Copy the example file before running the stack:
 
@@ -160,7 +184,7 @@ cd backend
 NODE_ENV=test USE_PG_MEM=true npx jest --runInBand --detectOpenHandles
 ```
 
-## Deployment notes
+## Deployment Notes
 
 ### Kubernetes and Helm
 
@@ -180,11 +204,12 @@ terraform apply
 ```
 
 Supported clouds:
+
 - AWS
 - Azure
 - GCP
 
-## Security and operations
+## Security and Operations
 
 - JWTs used for secure API auth
 - Secrets stored outside source control
@@ -206,13 +231,17 @@ Verify that `VITE_API_BASE_URL` matches your backend base URL and that the API i
 
 Check that the port is free and volume state is not corrupted.
 
+### Demo login not working
+
+Make sure the demo user has been seeded into the database (for example via the scripts in `database/` or `scripts/`), and that the backend is running.
+
 ## Cleanup
 
 ```bash
 docker compose down -v
 ```
 
-## Future improvements
+## Future Improvements
 
 - OpenTelemetry tracing
 - Redis caching layer
