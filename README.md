@@ -240,6 +240,32 @@ Make sure the demo user has been seeded into the database (for example via the s
 ```bash
 docker compose down -v
 ```
+## Explore This Repository
+
+Open this project in different tools (Ctrl/Cmd + click to open in a new tab).
+
+| Tool | What it does | Link |
+| ---- | ------------ | ---- |
+| GitHub1s | Read-only VS Code in the browser | [Open](https://github1s.com/rohitgit20/three-tier-devops) |
+| GitHub.dev | Web editor (VS Code) | [Open](https://github.dev/rohitgit20/three-tier-devops) |
+| VS Code for the Web | Microsoft-hosted VS Code | [Open](https://vscode.dev/github/rohitgit20/three-tier-devops) |
+| GitDiagram | AI-generated architecture diagram | [Open](https://gitdiagram.com/rohitgit20/three-tier-devops) |
+| DeepWiki | AI-generated wiki and Q&A | [Open](https://deepwiki.com/rohitgit20/three-tier-devops) |
+| Sourcegraph | Code search and navigation | [Open](https://sourcegraph.com/github.com/rohitgit20/three-tier-devops) |
+| uithub | Repo flattened into one text view | [Open](https://uithub.com/rohitgit20/three-tier-devops) |
+| GitIngest | Repo digest for AI prompts | [Open](https://gitingest.com/rohitgit20/three-tier-devops) |
+| Star History | Star growth chart | [Open](https://star-history.com/#rohitgit20/three-tier-devops) |
+| OSS Insight | Contributor and commit analytics | [Open](https://ossinsight.io/analyze/rohitgit20/three-tier-devops) |
+
+### Quick Links
+
+- [CI/CD runs (Actions)](https://github.com/rohitgit20/three-tier-devops/actions)
+- [Latest release](https://github.com/rohitgit20/three-tier-devops/releases/latest)
+- [Commit activity](https://github.com/rohitgit20/three-tier-devops/graphs/commit-activity)
+- [Open issues](https://github.com/rohitgit20/three-tier-devops/issues)
+- [Download as ZIP](https://github.com/rohitgit20/three-tier-devops/archive/refs/heads/main.zip)
+- [Repo metadata (API)](https://api.github.com/repos/rohitgit20/three-tier-devops)
+- [Commits feed (Atom)](https://github.com/rohitgit20/three-tier-devops/commits/main.atom)
 
 ## Future Improvements
 
